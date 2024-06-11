@@ -4,7 +4,7 @@
       You’re all set! <br />
       Welcome :)
     </h1>
-    <button class="brand-btn w-5/12 mx-auto brand-primary mt-4" @click="$router.push('/account/kyc')">
+    <button class="brand-btn w-5/12 mx-auto brand-primary mt-4" @click="$router.push('/app/dashboard')">
       Continue
     </button>
   </div>

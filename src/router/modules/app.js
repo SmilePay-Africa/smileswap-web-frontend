@@ -2,7 +2,7 @@ import Home from '@/modules/App/Dashboard/Index.vue'
 
 const routes = [
   {
-    path: '/',
+    path: '/app/dashboard',
     name: 'dashboard-home',
     component: Home,
     meta: {

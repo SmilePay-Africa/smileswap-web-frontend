@@ -11,7 +11,7 @@
           <vField name="password" v-slot="{ field }" rules="required">
             <VuePincodeInput
               v-model="pincode"
-              input-class="w-12 h-12 text-2xl font-semibold rounded-lg bg-borderBg border-borderBg"
+              input-class="lg:w-12 lg:h-12 md:w-8 md:h-8 w-8 h-8 lg:text-2xl md:text-xl text-lg font-semibold rounded-lg bg-borderBg border-borderBg"
               success-class=""
               spacing-class=""
               :digits="6"

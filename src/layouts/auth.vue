@@ -1,7 +1,7 @@
 <template>
-  <div class="flex flex-col justify-between">
-    <div>
-      <div class="h-[60px] grid-container">
+  <div >
+    <div class="flex flex-col justify-center h-screen" >
+      <div class="h-[60px] md:grid grid-container lg:grid hidden">
         <div></div>
         <div></div>
         <div></div>
@@ -9,13 +9,13 @@
         <div></div>
       </div>
       <div
-        class="border-t border-b border-dashed border-borderBg pl-[60px] pr-[60px]"
+        class="border-t border-b border-dashed border-borderBg lg:px-[60px] md:px-[60px] lg:py-0 md:py-0 px-6 py-6"
         style="height: calc(100vh - 120px)"
       >
         <div
-          class="border-dashed border-borderBg border-l border-r h-full content flex items-center justify-center"
+          class="lg:border-dashed md:border-dashed border-none  border-borderBg border-l border-r h-full content flex items-center justify-center"
         >
-          <div :class="isInfoPage ? 'w-6/12' : 'w-4/12'">
+          <div :class="isInfoPage ? 'lg:w-6/12 md:7/12 w-11/12' : 'lg:w-4/12 md:4/12 w-full'">
             <img src="@/assets/BrandImg/logo.svg" class="mx-auto mb-3 w-32" alt="" v-if="!isInfoPage"/>
             <div :class="isInfoPage ? '' : 'border border-borderBg border-dashed rounded-xl py-6 px-8'">
               <slot />
@@ -29,7 +29,7 @@
           </div>
         </div>
       </div>
-      <div class="h-[60px] grid-container">
+      <div class="h-[60px]  md:grid grid-container lg:grid hidden">
         <div></div>
         <div></div>
         <div></div>
@@ -55,7 +55,6 @@ export default {
 
 <style>
 .grid-container {
-  display: grid;
   grid-template-columns: 60px 250px auto 250px 60px;
 }
 
@@ -67,5 +66,13 @@ export default {
   box-shadow: 4px 7px 134px 39px rgba(0, 0, 0, 0.03);
   -webkit-box-shadow: 4px 7px 134px 39px rgba(0, 0, 0, 0.03);
   -moz-box-shadow: 4px 7px 134px 39px rgba(0, 0, 0, 0.03);
+}
+
+@media (max-width: 540px) {
+  .content {
+    box-shadow: unset;
+  -webkit-box-shadow: unset;
+  -moz-box-shadow: unset;
+  }
 }
 </style>
